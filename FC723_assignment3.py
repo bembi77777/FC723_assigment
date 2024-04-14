@@ -18,10 +18,18 @@ class GCD_calculator:
         return a
 
     def input_calculate(self):
-        a = int(input("Enter first number: "))
-        b = int(input("Enter second number: "))
-        return self.calculate_gcd(a, b)
+        try:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            if a < 0 or b < 0:
+                raise ValueError("Enter positive number.")
+            return a, b
+        except ValueError as e:
+            print(f"Invalid input: {e}")
+            return None, None
+
 
 calculator = GCD_calculator()
-result = calculator.input_calculate()
-print(f"GCD is {result}")
+a, b = calculator.input_calculate()
+if a is not None and b is not None:
+    print(f"GCD is", calculator.calculate_gcd(a, b))
