@@ -45,3 +45,13 @@ a, b = calculator.input_calculate()
 if a is not None and b is not None:
     # calculate and print the GCD of the two numbers
     print(f"GCD is", calculator.calculate_gcd(a, b))
+
+# Extension to Euclidean Algorithm
+# Algorithm ExtendedEuclideanAlgorithm(a, b)
+#   gcd ← EuclideanAlgorithm(a, b)
+#   lcm ← (a * b) / gcd
+#   return lcm
+
+
+
+#   https://github.com/bembi77777/FC723_assigment.git
