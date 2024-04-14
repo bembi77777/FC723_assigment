@@ -11,14 +11,17 @@
 #   return a
 class GCD_calculator:
     def calculate_gcd(self, a, b):
-
         while b != 0:
             temp = b
             b = a % b
             a = temp
         return a
 
+    def input_calculate(self):
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+        return self.calculate_gcd(a, b)
 
-# Example usage
 calculator = GCD_calculator()
-print(calculator.calculate_gcd(48, 18))
+result = calculator.input_calculate()
+print(f"GCD is {result}")
